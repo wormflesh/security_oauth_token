@@ -1,0 +1,30 @@
+server:
+  port: 8002
+
+spring:
+  # 数据源配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # -------------------修改------------------------------------
+    url: "jdbc:mysql://127.0.0.1:3306/wormflesh_demo?useUnicode=true&useSSL=false&characterEncoding=utf8"
+    username: root
+    # ------------------修改--------------------------------------
+    password: 135790
+  #Redis
+  redis:
+    # Redis服务器地址
+    host: localhost
+    #Redis服务器连接端口
+    port: 6379
+    password:
+    # Redis数据库索引（默认为0）
+    database: 1
+    # 连接超时时间（毫秒）
+    timeout: 5000
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+
+logging:
+  level:
+    com.example.mapper: debug
